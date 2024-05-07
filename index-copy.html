@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Secrets</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Madimi+One&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/styles-blank.css">
+
+  <!-- use an import map to link to the Three.js CDN -->
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@0.162.0/build/three.module.js",
+        "three/addons/": "https://unpkg.com/three@0.162.0/examples/jsm/"
+      }
+    }
+  </script>
+
+  <!-- Link to your Javascript file as a type="module" -->
+
+</head>
+
+<body class="body" id ="body">
+    <!-- <script>
+      function addEvent(){
+         document.body.addEventListener("click", play)
+       }
+      function play() {
+        var sound = document.getElementById("sound");
+        sound.play();
+      }
+    </script> -->
+  <div class="top-left">
+    <a class="btn" href="index.html">Homepage</a>
+    <!-- <script>
+
+    jQuery (function($){
+      let song = document.querySelector("#song");
+      document.querySelector("#play-btn")
+      function button_action(){
+          if (song.paused){
+              song.play();
+              playBtn.innerHTML = "♫";
+          } else {
+              song.pause();
+              playBtn.innerHTML = "🔇"
+          }
+      };
+      });
+    </script>   -->
+    <button id="play-btn">♫</button>
+  </div>
+  <!-- //  INTRO  // -->
+  <header>
+    <div class="content-wrapper">
+      <div class="content-bg">
+        <h1>trash talk.</h1>
+
+  </header>
+
+  <main class="content-wrapper">
+
+  </main>
+  <a class="btt-btn" href="#">Back to Top</a>
+  </div>
+  </div>
+  <div id = "br">
+    <br><br>
+  </div>
+
+  <audio id="song" src="media/ES_The French Library - Franz Gordon.mp3"></audio>
+  <script type="module" src="js/secrets.js"></script>
+  <p id="credits">Sound Effect by floraphonic from Pixabay, Sound Effect by SmartSounds, Song by Dranz Gordon from Epidemic Sounds</p>
+  <script src="js/sound.js"></script>
+</body>
+<!-- <script>
+document.onclick = function (e){
+  let x = e.pageX;
+  ley y = e.pageY;
+
+  let span = document.createElement("span");
+  span.classList.add("click_effect");
+  span.style.top = y + "px";
+  span.style.left = x + "px";
+  document.body.appendChild(span);
+}
+</script> -->
+</html>
