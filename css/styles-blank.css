@@ -21,13 +21,10 @@ html {
     padding: 0;
 }
 
-html,
-body {
-    height: 100%;
-}
-
 body {
     color: whitesmoke;
+    height: 100%;
+    background-color: #000000;
     margin: 0;
     font-size: 1.4rem;
     line-height: 1.5;
@@ -73,8 +70,9 @@ h3 {
 }
 
 h1 {
-    font-size: 7rem;
-    line-height: 0.9;
+    font-size: 15rem;
+    line-height: 1;
+    flex-direction: column;
 }
 
 h2 {
@@ -104,9 +102,14 @@ a:hover {
         border-left: 100vw;
       } */
 
-.btn {
+
+#play-btn {
+    position: sticky;
+    cursor: pointer;
     background: #000000;
-    color: #ffc25f;
+    color: red;
+    border: 2px solid rgb(172, 30, 30);
+    border-radius: 10px;
     text-decoration: none;
     text-transform: uppercase;
     font-size: 1.4rem;
@@ -114,10 +117,7 @@ a:hover {
     padding: 12px;
     letter-spacing: 0.05em;
     line-height: 1;
-    border: none;
-    border-radius: 10px;
-    position: absolute;
-    margin-top: -9vh;
+    margin-top: 5vh;
     margin-left: 3vw;
     transition: left .5s;
     -webkit-animation: fadeIn 3s;
@@ -126,86 +126,8 @@ a:hover {
     -ms-animation: fadeIn 3s;
 }
 
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-@-moz-keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-@-webkit-keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-@-o-keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-@-ms-keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-/* .top-left:hover .btn {
-    left: 0;
-    opacity: 1;
-} */
-
-#play-btn {
-    cursor: pointer;
-    background: #000000;
-    color: #ffc25f;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 1.4rem;
-    display: inline-block;
-    padding: 12px;
-    letter-spacing: 0.05em;
-    line-height: 1;
-    border: none;
-    border-radius: 10px;
-    position: absolute;
-    margin-top: -9vh;
-    margin-left: 10.5vw;
-    transition: left .5s;
-    -webkit-animation: fadeIn 3s;
-    -moz-animation: fadeIn 3s;
-    -o-animation: fadeIn 3s;
-    -ms-animation: fadeIn 3s;
-}
-
 #play-btn:hover {
-    color: #a520c6;
+    color: #6e78ea;
 }
 
 @keyframes fadeIn {
@@ -331,26 +253,16 @@ a:hover {
 }
 
 
-.content-wrapper {
-    margin: 0 auto;
-    padding: 30px;
-    max-width: 900px;
-}
 
 
-/* HOME */
-.home {
-    background: url("AdobeStock_564419409.jpeg") no-repeat;
-    background-size: cover;
-    display: flex;
-    direction: column;
-}
+
+
 
 .content-wrapper {
     flex: 1 0 auto;
-    padding: 50px;
-    margin-top: 100px;
-    border-radius: 15px;
+    padding: 30px;
+    max-width: 500px;
+    margin-left: 100px;
     -webkit-animation: fadeIn 3s;
     -moz-animation: fadeIn 3s;
     -o-animation: fadeIn 3s;
@@ -457,7 +369,7 @@ canvas {
     position: absolute;
     width: 80px;
     height: 80px;
-    border: 5px solid #ffc25f;
+    border: 5px solid #ffffff;
     pointer-events: none;
     margin-top: -45px;
     margin-left: -45px;

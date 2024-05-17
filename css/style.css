@@ -17,56 +17,131 @@ html {
 html,
 body {
   height: 100%;
-}
-
-body {
+  transition: background-color 0.5s ease-in-out; /* Add transition for background color */
   font-size: 1.4rem;
   line-height: 1.4;
-  background-color: rgb(30, 30, 35);
+  background-color: black;
   color: white;
   overflow: hidden;
 }
 
+/* h1 { font-family: Futura, "Trebuchet MS", Arial, sans-serif; font-size: 23px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 23px; } 
+h3 { font-family: Futura, "Trebuchet MS", Arial, sans-serif; font-size: 42px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 46.2px; } 
+p { font-family: Futura, "Trebuchet MS", Arial, sans-serif; font-size: 49px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 70px; } 
+blockquote { font-family: Futura, "Trebuchet MS", Arial, sans-serif; font-size: 17px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 23px; } 
+pre { font-family: Futura, "Trebuchet MS", Arial, sans-serif; font-size: 11px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 23px; } */
+
+.hidden {
+  opacity: 0;
+  display: none;
+  transition: 0.5s ease-out;
+}
+
+.reveal-text {
+  display: none;
+  opacity: 0;
+  font-size: 2rem;
+  margin-top: 10px;
+  color: white;
+  transition: 0.5s ease-in;
+}
+
+.reveal-text.show {
+  display: inline;
+  opacity: 1;
+}
+
 /* Button */
-#fish-btn {
+#btn-container {
+  margin-top: 0vh;
+  width: 5vw;
+  height: auto;
+}
+
+#btn1 {
   position: absolute;
-  border: 0px;
+  height: 185vh;
+  width: 350px;
+  border: none;
+  border-radius: 0px;
+  box-shadow: none;
+  left: 0;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* WOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO */
+  -ms-transform: translateY(-30%);
+  transform: translateY(-50%);
+  color: white;
   white-space: nowrap;
   box-sizing: border-box;
   user-select: none;
   cursor: pointer;
+  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+  font-size: 49px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 70px;
 }
+
 #fish1 {
   position: absolute;
   animation: slide 10s infinite;
+  width: 200px;
   left: -100%;
   margin: 7em -244px;
 }
 
+
 #fish2 {
   position: absolute;
   animation: slide 6s infinite;
+  width: 80px;
   top: 30%;
   right: -100%;
   margin: 7em -244px;
 }
 
+#fish3 {
+  position: absolute;
+  animation: slide 15s infinite;
+  width: 100px;
+  top: 60%;
+  left: -50%;
+  margin: 7em -244px;
+}
 @keyframes slide {
-  0% { left: -150%; }
-  35% { left: 100%; }  
-  65% { left: 80%; }
-  80% { left: 30%}
-  100% { left: 150%; }
+  0% {
+    left: -150%;
+  }
+
+  35% {
+    left: 100%;
+  }
+
+  65% {
+    left: 80%;
+  }
+
+  80% {
+    left: 30%
+  }
+
+  100% {
+    left: 150%;
+  }
 }
 
-button {
-background-color: inherit;
-cursor: pointer;
+/* button {
+  background-color: inherit;
+  cursor: pointer;
   border: none;
   appearance: none;
   box-shadow: 1px 1px 5px black;
   background-color: white;
-}
+} */
 
 div {
   display: flex;
@@ -83,41 +158,18 @@ div {
   transform: rotate(360deg);
 }
 
-img {
+.fish {
   width: 70px;
   height: 70px;
 }
 
-input[type='email'] {
-  padding: 10px;
-  border: 2px solid #314de4;
-  outline: none;
-  border-radius: 5px;
-  font-size: 24px;
-  color: #314de4;
-}
-
-.text {
-  font-size: 60px;
-  color: #314de4;
-  font-family: Arial;
-}
 
 
-
-
-
-
-
-
-
-
-
-.click_effect{
+.click_effect {
   position: absolute;
   width: 80px;
   height: 80px;
-  border: 5px solid #ffc25f;
+  border: 5px solid #ffffff;
   pointer-events: none;
   margin-top: -45px;
   margin-left: -45px;
@@ -125,51 +177,66 @@ input[type='email'] {
   opacity: 0;
   animation-name: click_animation;
   animation-duration: 0.6s;
-  animation-timing-function: linear; 
+  animation-timing-function: linear;
 }
+
 @keyframes click_animation {
   0% {
-      opacity: 1;
-      transform: scale(0.1);
+    opacity: 1;
+    transform: scale(0.1);
   }
+
   10% {
-      opacity: 1;
-      transform: scale(0.2);
+    opacity: 1;
+    transform: scale(0.2);
   }
+
   20% {
-      opacity: 1;
-      transform: scale(0.3);
+    opacity: 1;
+    transform: scale(0.3);
   }
+
   30% {
-      opacity: 0.9;
-      transform: scale(0.4);
+    opacity: 0.9;
+    transform: scale(0.4);
   }
+
   40% {
-      opacity: 0.7;
-      transform: scale(0.5);
+    opacity: 0.7;
+    transform: scale(0.5);
   }
+
   50% {
-      opacity: 0.5;
-      transform: scale(0.6);
+    opacity: 0.5;
+    transform: scale(0.6);
   }
+
   60% {
-      opacity: 0.3;
-      transform: scale(0.7);
+    opacity: 0.3;
+    transform: scale(0.7);
   }
+
   70% {
-      opacity: 0.1;
-      transform: scale(0.8);
+    opacity: 0.1;
+    transform: scale(0.8);
   }
+
   80% {
-      opacity: 0;
-      transform: scale(0.9);
+    opacity: 0;
+    transform: scale(0.9);
   }
+
   90% {
-      opacity: 0;
-      transform: scale(1);
+    opacity: 0;
+    transform: scale(1);
   }
+
   100% {
-      opacity: 1;
-      transform: scale(0.1);
+    opacity: 1;
+    transform: scale(0.1);
   }
+}
+
+#blank {
+  height: 5000px;
 }
