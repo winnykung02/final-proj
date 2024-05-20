@@ -1,48 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>secrets &#129323;</title>
-    <link rel="stylesheet" href="css/styles.css">
     <!DOCTYPE html>
-<html lang="en">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Madimi+One&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
-
-  <!-- Link to your Javascript file as a type="module" -->
-  <script type="module" src="js/main.js"></script>
+    <html lang="en">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Madimi+One&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <main>
-    <div id="box">
-<!-- ADD IN A FISH PNG HERE?????? -->
-        <!-- <button type="submit" id="fish-btn" onclick="openTab()"><img src="fish.png" alt="fish-shaped button"/></button> -->
-        <button type="submit">
-          <img class="fish" id="fish1" src="tuna.svg" alt="fish button" border="0" />
-          <span class="reveal-text">researchers estimate anywhere between 15 and 51 trillion microplastic particles floating at the ocean surface all around the world, from the poles to the equator.
-            </span>
-        </button>
-        <button type="submit">
-          <img class ="fish" id="fish2" src="tuna.svg" alt="fish button" border="0" />
-          <span class="reveal-text">100 million marine animals die each year from plastic waste alone.</span>
-        </button>
-        <button type="submit">
-          <img class ="fish" id="fish3" src="tuna.svg" alt="fish button" border="0" />
-          <span class="reveal-text">many marine animals mistake plastics for their for food. these animals clog their stomachs with plastic and become malnutritioned, eventually starving to death.</span>
-        </button>
-<container id="btn-container">
-        <button id="btn1" type="submit">diving deeper</button>
-</container>
+        <div id="box">
+            <button type="button" class="fish-btn">
+                <img class="fish" id="fish1" src="tuna.svg" alt="fish button" />
+                <span id="fish1-text" class="hidden-text">the ocean surface layer absorbs about one third of
+                    human-released CO2.</span>
+            </button>
+            <button type="button" class="fish-btn">
+                <img class="fish" id="fish2" src="tuna.svg" alt="fish button" />
+                <span id="fish2-text" class="hidden-text">100 million marine animals die each year from plastic
+                    waste
+                    alone.</span>
+            </button>
+            <button type="button" class="fish-btn">
+                <img class="fish" id="fish3" src="tuna.svg" alt="fish button" />
+                <span id="fish3-text" class="hidden-text">many marine animals mistake plastics for their food.
+                    they clog their stomachs with plastic and become malnutritioned, eventually starving to
+                    death.</span>
+            </button>
+            <button type="button" class="fish-btn">
+                <img class="fish" id="fish4" src="tuna.svg" alt="fish button" />
+                <span id="fish4-text" class="hidden-text">carnivorous fish, which make up the majority of commercial
+                    fish that humans eat, tend to have more microplastics in them than omnivores.</span>
+            </button>
+            <button type="button" class="fish-btn">
+                <img class="fish" id="fish5" src="tuna.svg" alt="fish button" />
+                <span id="fish5-text" class="hidden-text">small fish have the most microplastics per gram of
+                    tissue.</span>
+            </button>
+            <button type="button" class="fish-btn">
+                <img class="fish" id="fish6" src="tuna.svg" alt="fish button" />
+                <span id="fish6-text" class="hidden-text">ocean acidity has increased about 25% from preindustrial times
+                    to the early 21st century, a pace faster than any known in Earth's geologic past.</span>
+            </button>
+            <button type="button" class="fish-btn">
+                <img class="fish" id="fish7" src="tuna.svg" alt="fish button" />
+                <span id="fish7-text" class="hidden-text">the acidity of the ocean is greater than any point in the past
+                    two million years.</span>
+            </button>
 
-<p>hi</p>
-    </div>
-    <div id="blank">test</div>
+            <img src="blank.png" class="space" id="space" alt="space break" />
+
+        </div>
+
+        <div id="down">
+            <container id="btn-container">
+                <button id="btn1" href="#down" type="button"><a href="#down">diving deeper</a></button>
+            </container>
+            Click Here to Smoothly Scroll Down
+            <h1>You are down!</h1>
+
+            <container id="btn2-container">
+                <button id="btn2" href="#box" type="button">resurface</button>
+            </container>
+        </div>
     </main>
+
     <script src="js/index.js"></script>
 </body>
+
 </html>

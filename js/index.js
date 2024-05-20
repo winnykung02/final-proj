@@ -1,24 +1,27 @@
-console.log("hello!!!");
-
-
-const runawayBtn = document.getElementById("runaway-btn")
-const OFFSET = 50 //how close mouse needs to be before it starts moving//
-
-//alert pops up and index.html opens in a new tab when button is clicked//
-
 document.addEventListener("DOMContentLoaded", () => {
     const fishButtons = document.querySelectorAll(".fish-btn");
-  
+
     fishButtons.forEach(button => {
-      button.addEventListener("click", () => {
-        const img = button.querySelector("img");
-        const text = button.querySelector(".reveal-text");
-        
-        img.classList.add("hidden");
-        text.style.display = "inline"; // Or use a CSS class to handle the display
-      });
+        button.addEventListener("click", (event) => {
+            event.stopPropagation(); // prevent triggering the background click event
+            const img = button.querySelector("img");
+            const text = button.querySelector(".hidden-text");
+            // const rect = button.getBoundingClientRect(); // button position
+            // hide fish button with an ease-out animation
+            img.style.transition = "opacity 0.6s ease-out";
+            img.style.opacity = "0";
+
+            setTimeout(() => {
+                img.classList.add("hidden");
+                // text.style.top = `${rect.top}px`;
+                // text.style.left = `${rect.left}px`;
+                // shows hidden text with ease-in
+                text.classList.remove("hidden");
+                text.style.opacity = "1";
+            }, 600);
+        });
     });
-  });
+});
 
 
 //click on background changes background color, looped between pink & dark gray//
