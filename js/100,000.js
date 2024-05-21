@@ -6,7 +6,7 @@ let canCreateCircles = true; // controls creation of circles
 // observe the canvas container
 function preload() {
     console.log("pre-loading image...");
-    img = loadImage("images/2050.png", () => {
+    img = loadImage("images/100,000.png", () => {
         console.log("image loaded successfully");
     }, () => {
         console.error("failed to load image");
@@ -122,7 +122,7 @@ class Circle {
 
     grow() {
         if (this.growing) {
-            this.r += 1;
+            this.r += 0.5;
         }
     }
 
@@ -137,3 +137,16 @@ class Circle {
         ellipse(this.x, this.y, this.r * 2);
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
