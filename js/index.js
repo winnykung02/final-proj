@@ -23,8 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-
-//click on background changes background color, looped between pink & dark gray//
+//click on background changes background color, looped between  black & dark red//
 
 var box = document.querySelector("body"),
     colors = ["darkRed", "black"];
@@ -40,13 +39,13 @@ document.onclick = function (e) {
     let x = e.pageX;
     let y = e.pageY;
 
-let span = document.createElement("span");
-span.classList.add("click_effect");
-span.style.top = y + "px";
-span.style.left = x + "px";
-document.body.appendChild(span);
+    let span = document.createElement("span");
+    span.classList.add("click_effect");
+    span.style.top = y + "px";
+    span.style.left = x + "px";
+    document.body.appendChild(span);
 
-setTimeout(() => {
-    span.remove();
-}, 500);
+    setTimeout(() => {
+        span.remove();
+    }, 500);
 }

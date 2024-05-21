@@ -51,7 +51,7 @@ function draw() {
 
     while (count < total && canCreateCircles) {
         let newC = newCircle();
-        if (newC !== null) {    
+        if (newC !== null) {
             circles.push(newC);
             count++;
         }

@@ -10,7 +10,7 @@ let playBtn = document.querySelector("#play-btn")
 
 
 document.querySelector("#body").addEventListener("pointerdown", () => {
-sounds[lastSound].pause();
+    sounds[lastSound].pause();
     sounds.volume = 0.1;
     sounds[lastSound].currentTime = 0;
     let random = Math.floor(Math.random() * sounds.length);

@@ -17,8 +17,8 @@ body {
   font-family: Arial, sans-serif;
   color: white;
   transition: background-color 1s ease-in-out;
-  font-size: 1.4rem;
-  line-height: 1.4;
+  font-size: 16rem;
+  line-height: 14;
 }
 
 .box {
@@ -46,7 +46,7 @@ a {
 
 .hidden-text {
   position: absolute;
-  font-size: 1rem;
+  font-size: 1.4rem;
   color: white;
   background-color: transparent;
   max-width: 200px;
@@ -61,7 +61,7 @@ a {
   transition: opacity 0.6s ease-out;
 }
 
-.big-fish{
+.big-fish {
   cursor: pointer;
   width: 150px;
   transition: opacity .3s ease-out;
@@ -70,7 +70,7 @@ a {
 #fish1 {
   position: absolute;
   animation: slide 10s infinite;
-  width: 200px;
+  width: 250px;
   top: 10%;
   left: -100%;
 }
@@ -78,7 +78,7 @@ a {
 #fish2 {
   position: absolute;
   animation: slide 6s infinite;
-  width: 80px;
+  width: 120px;
   top: 30%;
   right: -100%;
 }
@@ -86,7 +86,7 @@ a {
 #fish3 {
   position: absolute;
   animation: slide 15s infinite;
-  width: 100px;
+  width: 150px;
   top: 60%;
   left: -50%;
 }
@@ -94,7 +94,7 @@ a {
 #fish4 {
   position: absolute;
   animation: slide 8.5s infinite;
-  width: 150px;
+  width: 200px;
   top: 90%;
   left: -50%;
 }
@@ -102,7 +102,7 @@ a {
 #fish5 {
   position: absolute;
   animation: slide 7s infinite;
-  width: 80px;
+  width: 120px;
   top: 110%;
   left: -50%;
 }
@@ -110,7 +110,7 @@ a {
 #fish6 {
   position: absolute;
   animation: slide 12s infinite;
-  width: 110px;
+  width: 160px;
   top: 200%;
   left: -50%;
 }
@@ -118,7 +118,7 @@ a {
 #fish7 {
   position: absolute;
   animation: slide 6s infinite;
-  width: 80px;
+  width: 120px;
   top: 250%;
   left: -50%;
 }
@@ -132,6 +132,7 @@ a {
   motion-rotation: auto;
   transition: .5s ease-in-out;
 }
+
 #big-fish:hover {
   rotate: -20grad;
 }
@@ -205,11 +206,11 @@ a {
   justify-content: center;
   align-items: center;
   color: white;
-  right: 0%;
-  bottom: 50%;
-  border-radius: 300px;
-  height: 100px;
-  width: 100px;
+  left: 4000%;
+  bottom: 100%;
+  border-radius: 500px;
+  height: 180px;
+  width: 180px;
   cursor: pointer;
   font-family: Futura, "Trebuchet MS", Arial, sans-serif;
   font-size: 24px;
@@ -217,12 +218,42 @@ a {
   transition: transform 0.7s ease-in-out;
 }
 
-#btn1:hover{
+#btn1:hover {
   transform: rotate(360deg);
 }
 
-#btn2:hover{
-  rotate: -10grad;
+#btn2:hover {
+  transform: rotate(-360deg);
+}
+
+#next-btn {
+
+  position: absolute;
+  cursor: pointer;
+  background: #000000;
+  color: red;
+  border: 2px solid rgb(165, 165, 165);
+  border-radius: 10px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  display: inline-block;
+  padding: 12px;
+  letter-spacing: 0.05em;
+  line-height: 1;
+  width: 100px;
+  bottom: 5vh;
+  right: -2400%;
+  margin-left: 60px;
+  transition: left .5s;
+  -webkit-animation: fadeIn 3s;
+  -moz-animation: fadeIn 3s;
+  -o-animation: fadeIn 3s;
+  -ms-animation: fadeIn 3s;
+}
+
+#next-btn:hover {
+  color: white;
 }
 
 #fish1-text {
