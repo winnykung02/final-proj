@@ -7,7 +7,7 @@ html {
 * {
   margin: 0;
   padding: 0;
-
+  cursor: url('images/hook.png'), auto;
 }
 
 body {
@@ -19,6 +19,7 @@ body {
   transition: background-color 1s ease-in-out;
   font-size: 16rem;
   line-height: 14;
+
 }
 
 .box {
