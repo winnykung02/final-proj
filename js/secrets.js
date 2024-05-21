@@ -15,24 +15,10 @@ let circles;
 let spots;
 let img;
 let canCreateCircles = true; // controls creation of circles
-let observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            // start the animation when element is visible
-            loop();
-            // stop observing
-            observer.unobserve(entry.target);
-        }
-    });
-}, {
-    threshold: 0.1
-});
 
 // observe the canvas container
-observer.observe(document.querySelector('.canvas-container'));
-
 function preload() {
-    img = loadImage("media/2050.png");
+    img = loadImage("images/2050.png");
 }
 
 function setup() {
