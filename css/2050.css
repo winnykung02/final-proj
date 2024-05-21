@@ -19,12 +19,11 @@ body {
     color: whitesmoke;
     height: 100%;
     background-color: #000000;
-    height: 100vh;
     margin: 0;
     font-size: 1.4rem;
     line-height: 1.5;
     font-family: "Poppins", sans-serif;
-    height: 500vh;
+    overflow: hidden;
 }
 
 
@@ -44,7 +43,7 @@ body {
 
 
 .content-wrapper {
-    width: 100vw;
+    /* width: 100vw; */
     height: 100vh;
 }
 
@@ -63,7 +62,7 @@ a:hover {
     align-items: center;
     position: relative;
     height: 400px;
-    width: 900px;
+    /* width: 900px; */
     margin: auto;
     grid-area: blank;
 }
@@ -78,7 +77,7 @@ a:hover {
 
 #text {
     position: absolute;
-    top: 65vh;
+    top: 65%;
     margin-left: 20px;
     text-align: center;
     text-justify: center;
@@ -128,9 +127,9 @@ a:hover {
     padding: 12px;
     letter-spacing: 0.05em;
     line-height: 1;
-    width: 140px;
+    width: 100px;
     bottom: 5vh;
-    right: 5%;
+    right: 3.5%;
     margin-left: 60px;
     transition: left .5s;
     -webkit-animation: fadeIn 3s;
@@ -139,7 +138,37 @@ a:hover {
     -ms-animation: fadeIn 3s;
 }
 
-#play-btn:hover {
+#next-btn:hover {
+    color: white;
+}
+
+#back-btn {
+
+    position: absolute;
+    cursor: pointer;
+    background: #000000;
+    color: red;
+    border: 2px solid rgb(172, 30, 30);
+    border-radius: 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    display: inline-block;
+    padding: 12px;
+    letter-spacing: 0.05em;
+    line-height: 1;
+    width: 100px;
+    bottom: 5vh;
+    left: 1.5%;
+    margin-left: 60px;
+    transition: left .5s;
+    -webkit-animation: fadeIn 3s;
+    -moz-animation: fadeIn 3s;
+    -o-animation: fadeIn 3s;
+    -ms-animation: fadeIn 3s;
+}
+
+#back-btn:hover {
     color: white;
 }
 
@@ -263,13 +292,4 @@ a:hover {
         opacity: 1;
         transform: scale(0.1);
     }
-}
-
-#br {
-    margin-bottom: 100px;
-}
-
-#credits {
-    text-align: center;
-    bottom: 0px;
 }
