@@ -55,11 +55,16 @@ a {
 }
 
 .fish {
-  transition: opacity 0.6s ease-out;
   cursor: pointer;
   width: 70px;
   height: 70px;
   transition: opacity 0.6s ease-out;
+}
+
+.big-fish{
+  cursor: pointer;
+  width: 150px;
+  transition: opacity .3s ease-out;
 }
 
 #fish1 {
@@ -118,6 +123,29 @@ a {
   left: -50%;
 }
 
+#big-fish {
+  position: absolute;
+  animation: 10s linear 1s infinite alternate slidein;
+  width: 200px;
+  top: 500%;
+  left: -50%;
+  motion-rotation: auto;
+  transition: .5s ease-in-out;
+}
+#big-fish:hover {
+  rotate: -20grad;
+}
+
+@keyframes slidein {
+  0% {
+    left: 30%;
+  }
+
+  100% {
+    left: 70%;
+  }
+}
+
 #space {
   position: absolute;
   top: 600%;
@@ -159,21 +187,42 @@ a {
   justify-content: center;
   align-items: center;
   color: white;
-  left: 4%;
-  top: 60%;
+  left: 2.5%;
+  top: 70%;
   border-radius: 500px;
-  height: 33.3%;
-  width: 18%;
+  height: 26%;
+  width: 12%;
   cursor: pointer;
   font-family: Futura, "Trebuchet MS", Arial, sans-serif;
-  font-size: 49px;
+  font-size: 24px;
   font-weight: 400;
-  line-height: 70px;
+  transition: transform 0.7s ease-in-out;
 }
 
-#btn1:hover {
+#btn2 {
+  position: absolute;
+  background-color: transparent;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  right: 0%;
+  bottom: 50%;
+  border-radius: 300px;
+  height: 100px;
+  width: 100px;
+  cursor: pointer;
+  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 400;
   transition: transform 0.7s ease-in-out;
+}
+
+#btn1:hover{
   transform: rotate(360deg);
+}
+
+#btn2:hover{
+  rotate: -10grad;
 }
 
 #fish1-text {
@@ -216,6 +265,13 @@ a {
   position: absolute;
   top: 255%;
   left: 76%;
+}
+
+#big-fish-text {
+  position: absolute;
+  top: 520%;
+  left: 42%;
+  display: block;
 }
 
 div {
