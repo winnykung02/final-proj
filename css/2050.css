@@ -73,6 +73,7 @@ a:hover {
     height: 100%;
     z-index: 99;
     border: 1px solid white;
+    margin: 60px;
 }
 
 #play-btn {

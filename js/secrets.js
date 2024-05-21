@@ -5,7 +5,7 @@ let canCreateCircles = true; // controls creation of circles
 
 // observe the canvas container
 function preload() {
-    console.log("Loading image...");
+    console.log("pre-loading image...");
     img = loadImage("images/2050.png", () => {
         console.log("image loaded successfully");
     }, () => {
@@ -34,9 +34,9 @@ function setup() {
             }
         }
     }
-    console.log("Spots array filled with bright pixels");
-    noLoop(); // drawing is paused initially
 }
+
+
 
 setTimeout(() => {
     canCreateCircles = false;
