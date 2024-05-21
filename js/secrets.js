@@ -1,16 +1,3 @@
-// //click on background changes text color, looped between pink & dark gray//
-// // box.onclick = function () {
-// //     document.getElementById("textColor").style.color,
-// //     colors = ["pink", "rgb(30, 30, 35)"];
-// // box.onclick = function changeFontColor() {
-// //     if (color == "pink") { // if bg color is pink change it to gray otherwise change it to pink.
-// //         box.style.color = "rgb(30, 30, 35)";
-// //      } else {
-// //         box.style.color = "pink";
-
-// //     box.style.textDecorationColor = textColor;}
-
-
 let circles;
 let spots;
 let img;
@@ -18,12 +5,22 @@ let canCreateCircles = true; // controls creation of circles
 
 // observe the canvas container
 function preload() {
-    img = loadImage("images/2050.png");
+    console.log("Loading image...");
+    img = loadImage("images/2050.png", () => {
+        console.log("image loaded successfully");
+    }, () => {
+        console.error("failed to load image");
+    });
 }
 
+
 function setup() {
+    console.log("set up canvas...");
     let canvas = createCanvas(900, 400);
     canvas.parent('the-canvas');
+    console.log("canvas created and attached to parent");
+
+
     img.loadPixels();
     spots = [];
     circles = [];
@@ -37,7 +34,8 @@ function setup() {
             }
         }
     }
-    noLoop(); // Ensure drawing is paused initially
+    console.log("Spots array filled with bright pixels");
+    noLoop(); // drawing is paused initially
 }
 
 setTimeout(() => {
@@ -53,13 +51,14 @@ function draw() {
 
     while (count < total && canCreateCircles) {
         let newC = newCircle();
-        if (newC !== null) {
+        if (newC !== null) {    
             circles.push(newC);
             count++;
         }
         attempts++;
         if (attempts > 500) {
             noLoop();
+            console.log("finished creating circles");
             break;
         }
     }
