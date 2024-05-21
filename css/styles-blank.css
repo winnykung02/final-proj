@@ -19,50 +19,161 @@ body {
     color: whitesmoke;
     height: 100%;
     background-color: #000000;
-    display: flex;
-    flex-direction: column;
     height: 100vh;
     margin: 0;
     font-size: 1.4rem;
     line-height: 1.5;
     font-family: "Poppins", sans-serif;
+    height: 500vh;
 }
 
 main {
-    position: relative; 
+    position: relative;
     width: 100vw;
     height: 100vh;
-    display: grid;
     overflow-x: hidden;
-    grid-template-areas:
-        "top top top"
-        "jelly1 blank blank"
-        "blank blank jelly2"
-        "blank blank blank"
-        "blank jelly3 blank"
-        "jelly4 blank blank"
-        "blank jelly5 jelly6"
-        "blank blank blank"
-        "jelly7 jelly3 blank"
-        "blank blank blank"
-        "blank jelly8 blank";
+}
 
-    grid-template-columns: 1fr 2fr 2fr;
-    grid-template-rows: 500px auto 500px;
-    gap: 0 50px;
-    margin: 40px;
+@keyframes floatAnimation {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
 }
+
+#jelly1,
+#jelly2,
+#jelly3,
+#jelly4,
+#jelly5,
+#jelly6,
+#jelly7,
+#jelly8,
+#seal {
+    animation-name: floatAnimation;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
 #jelly1 {
-    grid-area: jelly1
+    position: absolute;
+    width: 300px;
+    top: 20%;
+    right: 10%;
+    animation-duration: 6s;
+    transition: 0.6s ease-in-out;
 }
+
+#jelly1:hover {
+    rotate: -10deg;
+}
+
 #jelly2 {
-    grid-area: jelly2
+    position: absolute;
+    width: 100px;
+    bottom: 0%;
+    left: 10%;
+    animation-duration: 3s;
+    transition: 0.6s ease-in-out;
 }
+
+#jelly2:hover {
+    rotate: -100deg;
+}
+
 #jelly3 {
-    grid-area: jelly3
+    position: absolute;
+    width: 200px;
+    bottom: -10%;
+    left: 30%;
+    animation-duration: 8s;
+    transition: 0.6s ease-in-out;
 }
+
+#jelly3:hover {
+    rotate: 40deg;
+}
+
 #jelly4 {
-    grid-area: jelly4
+    position: absolute;
+    width: 120px;
+    bottom: -60%;
+    left: 80%;
+    animation-duration: 7s;
+    transition: 0.6s ease-in-out;
+}
+
+#jelly4:hover {
+    rotate: -10deg;
+}
+
+#jelly5 {
+    position: absolute;
+    width: 80px;
+    bottom: -30%;
+    left: 7%;
+    animation-duration: 4s;
+    transition: 0.6s ease-in-out;
+}
+
+#jelly5:hover {
+    transform: rotate(-750deg);
+}
+
+#jelly6 {
+    position: absolute;
+    width: 70px;
+    bottom: -80%;
+    left: 80%;
+    animation-duration: 5s;
+    transition: 0.6s ease-in-out;
+}
+
+#jelly6:hover {
+    rotate: 720deg;
+}
+
+#jelly7 {
+    position: absolute;
+    width: 180px;
+    bottom: -130%;
+    left: 65%;
+    animation-duration: 6s;
+    transition: 0.6s ease-in-out;
+}
+
+#jelly7:hover {
+    rotate: -75deg;
+}
+
+#jelly8 {
+    position: absolute;
+    width: 200px;
+    bottom: -100%;
+    left: 10%;
+    animation-duration: 7s;
+    transition: 0.6s ease-in-out;
+}
+
+#jelly8:hover {
+    rotate: 20deg;
+}
+
+#credits {
+    position: absolute;
+    height: 50px;
+    background-color: transparent;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin-bottom: 0px;
 }
 
 .content-wrapper {
@@ -94,7 +205,6 @@ a:hover {
 }
 
 .canvas-container {
-    display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
